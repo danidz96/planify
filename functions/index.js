@@ -33,7 +33,7 @@ exports.userJoined = functions.auth.user()
             .doc(user.uid).get().then(doc => {
                 const newUser = doc.data();
                 const notification = {
-                    constent: 'Joined the app',
+                    content: 'Joined the app',
                     user: `${newUser.firstName} ${newUser.lastName}`,
                     time: admin.firestore.FieldValue.serverTimestamp()
                 }
